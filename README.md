@@ -1,1 +1,3 @@
-# etch-a-scetch
+# etch-a-sketch
+
+Etch a sketch practice project
