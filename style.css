@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 46%;
+    height: auto;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
