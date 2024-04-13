@@ -1,6 +1,8 @@
-const container = document.querySelector("div");
+const container = document.querySelectorAll("div")[1];
 
 const button = document.querySelector("button");
+const reset = document.querySelectorAll("button")[1];
+
 button.addEventListener("click", () => {
   let input = Number(prompt("How many boxes should grid side be made of?"));
   console.log(input);
@@ -25,6 +27,12 @@ button.addEventListener("click", () => {
 
     gridBox.addEventListener("mouseover", () => {
       gridBox.style.backgroundColor = "black";
+    });
+
+    reset.addEventListener("click", () => {
+      for (let i = 0; i < input * input; i++) {
+        gridBox.style.backgroundColor = "transparent";
+      }
     });
   }
 });
