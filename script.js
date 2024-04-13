@@ -15,7 +15,7 @@ button.addEventListener("click", () => {
     const gridBox = document.createElement("div");
     gridBox.style.width = boxSize - 2 + "px";
     gridBox.style.height = boxSize - 2 + "px";
-    gridBox.style.border = "1px solid black";
+    gridBox.classList.add("grid-box");
     container.appendChild(gridBox);
     button.addEventListener("click", () => {
       for (let i = 0; i < input * input; i++) {
