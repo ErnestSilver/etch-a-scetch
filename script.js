@@ -33,12 +33,24 @@ button.addEventListener("click", () => {
         gridBox.style.backgroundColor = "black";
       });
     });
+
     buttonRainbow.addEventListener("click", () => {
       gridBox.addEventListener("mouseover", () => {
         const random1 = Math.floor(Math.random() * 256);
         const random2 = Math.floor(Math.random() * 256);
         const random3 = Math.floor(Math.random() * 256);
         gridBox.style.backgroundColor = `rgb(${random1}, ${random2}, ${random3})`;
+      });
+    });
+
+    buttonDarker.addEventListener("click", () => {
+      let opacity = 10;
+      for (let i = 0; i < input * input; i++) {
+        gridBox.style.backgroundColor = "transparent";
+      }
+      gridBox.addEventListener("mouseover", () => {
+        gridBox.style.background = `rgb(0 0 0 / ${opacity}%)`;
+        opacity = opacity + 10;
       });
     });
 
