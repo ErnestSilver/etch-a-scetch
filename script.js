@@ -1,6 +1,9 @@
 const container = document.querySelectorAll("div")[1];
 
 const button = document.querySelector("button");
+const buttonClassic = document.querySelectorAll("button")[2];
+const buttonRainbow = document.querySelectorAll("button")[3];
+const buttonDarker = document.querySelectorAll("button")[4];
 const reset = document.querySelectorAll("button")[1];
 
 button.addEventListener("click", () => {
@@ -25,8 +28,18 @@ button.addEventListener("click", () => {
       }
     });
 
-    gridBox.addEventListener("mouseover", () => {
-      gridBox.style.backgroundColor = "black";
+    buttonClassic.addEventListener("click", () => {
+      gridBox.addEventListener("mouseover", () => {
+        gridBox.style.backgroundColor = "black";
+      });
+    });
+    buttonRainbow.addEventListener("click", () => {
+      gridBox.addEventListener("mouseover", () => {
+        const random1 = Math.floor(Math.random() * 256);
+        const random2 = Math.floor(Math.random() * 256);
+        const random3 = Math.floor(Math.random() * 256);
+        gridBox.style.backgroundColor = `rgb(${random1}, ${random2}, ${random3})`;
+      });
     });
 
     reset.addEventListener("click", () => {
