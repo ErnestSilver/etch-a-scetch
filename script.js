@@ -22,5 +22,9 @@ button.addEventListener("click", () => {
         container.removeChild(gridBox);
       }
     });
+
+    gridBox.addEventListener("mouseover", () => {
+      gridBox.style.backgroundColor = "black";
+    });
   }
 });
